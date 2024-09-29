@@ -7,7 +7,7 @@ from pybricks.tools import wait, StopWatch
 prime_hub = PrimeHub()
 left = Motor(Port.B, Direction.COUNTERCLOCKWISE)
 right = Motor(Port.E, Direction.CLOCKWISE)
-attach = Motor(Port.A)
+attach = Motor(Port.F)
 drive_base = DriveBase(left, right, 56, 130)
 def configure():
     drive_base.settings(straight_speed=175)
@@ -19,12 +19,25 @@ def configure():
 
 # The main program starts here.
 configure()
-drive_base.turn(-16, Stop.BRAKE)
-drive_base.straight(515, Stop.BRAKE)
-drive_base.turn(-17, Stop.BRAKE)
-#drive_base.straight(15, Stop.BRAKE)
-attach.run_angle(100,-80)
-drive_base.straight(35, Stop.BRAKE)
-attach.run_angle(100,250)
-drive_base.straight(-17, Stop.BRAKE)
-attach.run_angle(100,800)
+
+drive_base.straight(-460, Stop.BRAKE)
+drive_base.turn(-23, Stop.BRAKE)
+drive_base.straight(-51, Stop.BRAKE)
+attach.run_angle(100,74)
+drive_base.straight(50, Stop.BRAKE)
+drive_base.turn(-12, Stop.BRAKE)
+drive_base.straight(-60, Stop.BRAKE)
+drive_base.turn(12, Stop.BRAKE)
+drive_base.settings(turn_rate=200)
+attach.run_angle(100,-74)
+"""
+drive_base.straight(-430, Stop.BRAKE)
+drive_base.turn(-19, Stop.BRAKE)
+drive_base.straight(-55, Stop.BRAKE)
+attach.run_angle(100,84)
+drive_base.straight(50, Stop.BRAKE)
+drive_base.turn(-12, Stop.BRAKE)
+drive_base.straight(-60, Stop.BRAKE)
+drive_base.turn(12, Stop.BRAKE)
+attach.run_angle(100,-84)
+"""
