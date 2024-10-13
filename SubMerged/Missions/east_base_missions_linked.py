@@ -1,4 +1,4 @@
-def configureEast2():
+def configure():
     motor_1 = Motor(Port.E, Direction.COUNTERCLOCKWISE)
     motor_2 = Motor(Port.B, Direction.CLOCKWISE)
     motor = Motor(Port.F, Direction.CLOCKWISE)
@@ -38,3 +38,24 @@ def EAST2():
     drive_base.straight(-60, Stop.BRAKE)
     drive_base.straight(140, Stop.BRAKE)
     drive_base.turn(100, Stop.BRAKE)
+def EAST3():
+    configure()
+    drive_base.settings(straight_acceleration=100)
+    drive_base.straight(150, Stop.BRAKE)
+    drive_base.settings(straight_acceleration=500)
+    drive_base.straight(-100, Stop.BRAKE)
+    drive_base.straight(478, Stop.BRAKE)
+    motor.run_angle(100, 85, Stop.BRAKE)
+    drive_base.straight(-93, Stop.BRAKE)
+    drive_base.straight(-15, Stop.BRAKE)
+    motor.run_angle(100, -85, Stop.BRAKE)
+    drive_base.turn(20, Stop.BRAKE)
+    drive_base.curve(400,-70, Stop.BRAKE)
+
+    drive_base.straight(-200, Stop.BRAKE)
+    drive_base.turn(50, Stop.BRAKE)
+    drive_base.straight(-200, Stop.BRAKE)
+    drive_base.turn(-60, Stop.BRAKE)
+    drive_base.straight(400, Stop.BRAKE)
+    drive_base.turn(40, Stop.BRAKE)
+    drive_base.straight(400, Stop.BRAKE)
