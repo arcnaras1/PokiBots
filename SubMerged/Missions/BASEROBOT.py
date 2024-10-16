@@ -1,0 +1,14 @@
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import DriveBase
+from pybricks.tools import wait, StopWatch
+
+class BaseRobot(DriveBase):
+    def __init__(self, leftwheel: Port, rightwheel: Motor, front_attachment: Port, back_attachment: Port, wheel_diameter, axle_track):
+        self.hub = PrimeHub()
+        self.rightwheel = Motor(rightwheel)
+        self.leftwheel = Motor(leftwheel, Direction.COUNTERCLOCKWISE)
+        self.front_attachment = Motor(front_attachment)
+        self.back_attachment = Motor(back_attachment)
+        super().__init__(self.leftwheel, self.rightwheel, wheel_diameter, axle_track)    
