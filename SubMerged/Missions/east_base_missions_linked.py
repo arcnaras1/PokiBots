@@ -1,10 +1,4 @@
 from BASEROBOT import *
-def configureEast2():
-    br.settings(straight_speed=170)
-    br.settings(straight_acceleration=150)
-    br.settings(turn_rate=300)
-    br.settings(turn_acceleration=300)
-
 def EAST2(br: BaseRobot):
     br.settings(straight_speed=170)
     br.settings(straight_acceleration=150)
@@ -39,3 +33,26 @@ def EAST2(br: BaseRobot):
     br.straight(-60, Stop.BRAKE)
     br.straight(140, Stop.BRAKE)
     br.turn(100, Stop.BRAKE)
+def EAST3(br: BaseRobot):
+    br.settings(straight_speed=170)
+    br.settings(straight_acceleration=150)
+    br.settings(turn_rate=300)
+    br.settings(turn_acceleration=300)
+    br.settings(straight_acceleration=100)
+
+    br.settings(straight_acceleration=100)
+    br.straight(-528, Stop.BRAKE)
+    br.front_attachment.run_angle(100, 85, Stop.BRAKE)
+    br.straight(93, Stop.BRAKE)
+    br.straight(15, Stop.BRAKE)
+    br.front_attachment.run_angle(100, -85, Stop.BRAKE)
+    br.turn(20, Stop.BRAKE)
+    br.curve(400,-70, Stop.BRAKE)
+
+    br.straight(-200, Stop.BRAKE)
+    br.turn(50, Stop.BRAKE)
+    br.straight(-100, Stop.BRAKE)
+    br.turn(-60, Stop.BRAKE)
+    br.straight(400, Stop.BRAKE)
+    br.turn(40, Stop.BRAKE)
+    br.straight(400, Stop.BRAKE)
