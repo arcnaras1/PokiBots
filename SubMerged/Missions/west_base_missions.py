@@ -177,32 +177,28 @@ def WEST4(br):
 
 
 def WEST5(br):
+    def turn_attachment(motor, speed, degree):
+       multitask(motor.run_angle(speed, degree, Stop.BRAKE), wait(1000), race=True)
+    br.use_gyro(True)
+    br.reset()
+    br.settings(straight_speed=300)
+    br.settings(straight_acceleration=400)
+    br.settings(turn_rate=200)
+    br.settings(turn_acceleration=750)
 
 
-    def turn_attachment(attach_br.back_attachment, speed, degree):
-       multitask(attach_br.back_attachment.run_angle(speed, degree, Stop.BRAKE), wait(1000), race=True)
-
-
-   br.use_gyro(True)
-   br.reset()
-   br.settings(straight_speed=300)
-   br.settings(straight_acceleration=400)
-   br.settings(turn_rate=200)
-   br.settings(turn_acceleration=750)
-
-
-   br.straight(-140, Stop.BRAKE)
-   turn_attachment(br.front_attachment, 1500, -155)
-   br.straight(175, Stop.BRAKE)
-   br.turn(-75, Stop.COAST)
-   while not any(prime_hub.buttons.pressed()):
-       wait(1)
-   br.straight(190, Stop.BRAKE)
-   br.turn(8, Stop.BRAKE)
-   br.straight(-220, Stop.BRAKE)
+    br.straight(-140, Stop.BRAKE)
+    turn_attachment(br.front_attachment, 1500, -155)
+    br.straight(175, Stop.BRAKE)
+    br.turn(-75, Stop.COAST)
+    while not any(prime_hub.buttons.pressed()):
+        wait(1)
+    br.straight(190, Stop.BRAKE)
+    br.turn(8, Stop.BRAKE)
+    br.straight(-220, Stop.BRAKE)
 
 
 
 
-   #run_task(main())
+    #run_task(main())
 
