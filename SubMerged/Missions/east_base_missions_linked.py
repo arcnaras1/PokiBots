@@ -1,6 +1,6 @@
 if (not __name__ == "__main__"):
     from BASEROBOT import *
-    def EAST2(br: BaseRobot):
+    def EAST3(br: BaseRobot):
         br.settings(straight_speed=170)
         br.settings(straight_acceleration=150)
         br.settings(turn_rate=300)
@@ -34,7 +34,7 @@ if (not __name__ == "__main__"):
         br.straight(70, Stop.BRAKE)
         br.straight(-140, Stop.BRAKE)
         br.turn(92, Stop.BRAKE)
-    def EAST3(br: BaseRobot):
+    def EAST2(br: BaseRobot):
         br.settings(straight_speed=300)
         br.settings(straight_acceleration=600)
         br.settings(turn_rate=700)
@@ -47,7 +47,7 @@ if (not __name__ == "__main__"):
         #br.straight(-595, Stop.BRAKE)
         br.straight(150)
         br.turn(-2.5)
-        br.straight(-180)
+        br.straight(-160)
         br.front_attachment.run_angle(100,-85)
         br.straight(93, Stop.BRAKE)
         br.straight(19, Stop.BRAKE)
@@ -62,7 +62,7 @@ if (not __name__ == "__main__"):
         br.turn(-6, Stop.BRAKE)
         br.straight(300, Stop.NONE)
         br.turn(-50, Stop.NONE)
-        br.straight(-100, Stop.NONE)
+        br.straight(-85, Stop.NONE)
         br.turn(30, Stop.NONE)
         br.straight(-150, Stop.NONE)
         br.turn(50, Stop.NONE)
