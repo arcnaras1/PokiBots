@@ -1,22 +1,15 @@
 from pybricks.hubs import PrimeHub
-from pybricks.parameters import Button, Direction, Port
+from pybricks.parameters import Button, Direction, Port, Stop
 from pybricks.pupdevices import Motor
 from pybricks.robotics import DriveBase
-from pybricks.tools import wait, multitask
-from BASEROBOT import *
+from pybricks.tools import multitask, run_task, wait
+
 
 # Set up all devices.
 prime_hub = PrimeHub()
-def turn_attachment(motor, speed, degree):
-       print(motor.run_angle(speed, degree, Stop.BRAKE))
-       multitask(await motor.run_angle(speed, degree, Stop.BRAKE), wait(1000), race=True)
 
+# Collect corals and 1 Krill
 def WEST1(br):
-
-
-
-
-# The main program starts here.
    br.straight(230)
    br.straight(-300)
    while not any(prime_hub.buttons.pressed()):
@@ -32,20 +25,24 @@ def WEST1(br):
    br.straight(25)
    br.straight(-45)
 
-
-
-
+# Mission 5
 def WEST2(br):
+   leftwheel.reset_angle(0)
+   rightwheel.reset_angle(0)
    br.front_attachment.run_angle(1000,-20)
-   br.straight(-310, Stop.BRAKE)
+
+
+
+
+   br.straight(310, Stop.BRAKE)
    br.turn(113.7, Stop.BRAKE)
-   br.straight (75)
+   br.straight (-75)
    br.turn (57.7, Stop.BRAKE)
-   br.straight(56)
+   br.straight(-56)
    ###FReeze####
-   br.straight(400, Stop.BRAKE)
+   br.straight(-400, Stop.BRAKE)
    br.turn(27.7, Stop.BRAKE)
-   br.straight(-380.7, Stop.BRAKE)
+   br.straight(380.7, Stop.BRAKE)
 
 
 
@@ -53,7 +50,7 @@ def WEST2(br):
    br.turn (-22.7)
 
 
-   br.straight (-57)
+   br.straight (57)
 
 
 
@@ -67,7 +64,7 @@ def WEST2(br):
 
 
    ###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   br.straight(100  , Stop.BRAKE)
+   br.straight(-100  , Stop.BRAKE)
    ###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -75,7 +72,7 @@ def WEST2(br):
    br.front_attachment.run_angle(1000,75)
    br.curve(100,20, Stop.BRAKE)
    br.turn (11)
-   br.straight(-100)
+   br.straight(100)
    """
    br.turn (-20)
 
@@ -84,7 +81,7 @@ def WEST2(br):
    br.turn (25)
    """
    hub.light.on(Color.RED)
-   br.straight (-70)
+   br.straight (70)
    """
    br.turn (-40)
    hub.light.on(Color.RED)
@@ -94,11 +91,9 @@ def WEST2(br):
    """
    br.front_attachment.run_angle(1000,-80)
    br.turn (120)
-   br.straight (-300)
+   br.straight (300)
 
-
-
-
+# Mission 6
 def WEST3(br):
 
 
@@ -130,9 +125,59 @@ def WEST3(br):
    # br.settings(straight_speed=57)
    br.turn (90)
    br.straight (310)
-
-
+         
+# Missions 1, 2, 3, 4
 def WEST4(br):
+   attachment_motor = br.front_attachment
+
+   br.use_gyro(True)
+   br.settings(straight_speed=300)
+   br.settings(straight_acceleration=400)
+   br.settings(turn_rate=200)
+   br.settings(turn_acceleration=750)
+   br.reset()
+   ############# Mission 1 #############
+   br.straight(-490, Stop.BRAKE)
+   br.turn(-70, Stop.BRAKE)
+   br.straight(-115, Stop.BRAKE)
+   br.straight(100, Stop.BRAKE)
+   wait(100)
+   
+   ############# Mission 4 #############
+   br.turn(2, Stop.BRAKE)
+   br.turn_attachment(attachment_motor, 500, 135)
+   br.straight(-64)
+   br.turn_attachment(attachment_motor, 1500, -135)
+   wait(100)
+   
+   ############# Mission 2 #############
+   br.straight(-8, Stop.BRAKE)
+   br.turn_attachment(attachment_motor, 1500, 130)
+   br.straight(60, Stop.BRAKE)
+   br.turn(22, Stop.BRAKE)
+   br.turn_attachment(attachment_motor, 1500, -130)
+   br.straight(-43)
+   br.turn_attachment(attachment_motor, 1500, 130)
+   br.turn_attachment(attachment_motor, 500, -135)
+   br.straight(8, Stop.BRAKE)
+   wait(100)
+   
+   ############# Mission 3 #############
+   br.turn(38, Stop.BRAKE)
+   br.straight(-30)
+   br.turn(58, Stop.BRAKE)
+   br.straight(-38)
+   br.turn_attachment(attachment_motor, 500, 135)
+   br.turn_attachment(attachment_motor, 500, -135)
+   wait(100)
+   
+   ############# Return to Base #############
+   br.turn(105, Stop.BRAKE)
+   br.straight(-520, Stop.BRAKE)
+
+# Mission 1 part 2
+def WEST5(br):
+   attachment_motor = br.front_attachment
    br.use_gyro(True)
    br.reset()
    br.settings(straight_speed=300)
@@ -140,59 +185,12 @@ def WEST4(br):
    br.settings(turn_rate=200)
    br.settings(turn_acceleration=750)
 
-
-   br.straight(-490, Stop.BRAKE)
-   br.turn(-70, Stop.BRAKE)
-   br.straight(-115, Stop.BRAKE)
-   br.straight(100, Stop.BRAKE)
-   br.turn(4, Stop.BRAKE)
-   turn_attachment(br.front_attachment, 500, 135)
-   br.straight(-64)
-   turn_attachment(br.front_attachment, 1500, -135)
-   br.straight(-11, Stop.BRAKE)
-   turn_attachment(br.front_attachment, 1500, 130)
-   br.straight(65, Stop.BRAKE)
-   br.turn(22, Stop.BRAKE)
-   turn_attachment(br.front_attachment, 1500, -130)
-   br.straight(-51)
-   turn_attachment(br.front_attachment, 1500, 130)
-   turn_attachment(br.front_attachment, 500, -135)
-   br.straight(8, Stop.BRAKE)
-   br.turn(45, Stop.BRAKE)
-   br.straight(-30)
-   br.turn(55, Stop.BRAKE)
-   br.straight(-40)
-   turn_attachment(br.front_attachment, 500, 135)
-   turn_attachment(br.front_attachment, 500, -135)
-   br.turn(95, Stop.BRAKE)
-   br.straight(-495, Stop.BRAKE)
-   br.turn(90)
-   br.straight(-390, Stop.BRAKE)
-
-
-
-
-def WEST5(br):
-    br.use_gyro(True)
-    br.reset()
-    br.settings(straight_speed=300)
-    br.settings(straight_acceleration=400)
-    br.settings(turn_rate=200)
-    br.settings(turn_acceleration=750)
-
-
-    br.straight(-140, Stop.BRAKE)
-    turn_attachment(br.front_attachment, 1500, 50)
-    br.straight(175, Stop.BRAKE)
-    br.turn(-75, Stop.COAST)
-    while not any(prime_hub.buttons.pressed()):
-        wait(1)
-    br.straight(190, Stop.BRAKE)
-    br.turn(8, Stop.BRAKE)
-    br.straight(-220, Stop.BRAKE)
-
-
-
-
-    #run_task(main())
-
+   br.straight(-140, Stop.BRAKE)
+   br.turn_attachment(attachment_motor, 1500, 155)
+   br.straight(175, Stop.BRAKE)
+   br.turn(-75, Stop.COAST)
+   while not any(prime_hub.buttons.pressed()):
+      wait(1)
+   br.straight(190, Stop.BRAKE)
+   br.turn(8, Stop.BRAKE)
+   br.straight(-220, Stop.BRAKE)
