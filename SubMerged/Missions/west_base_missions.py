@@ -27,71 +27,24 @@ def WEST1(br):
 
 # Mission 5
 def WEST2(br):
-   leftwheel.reset_angle(0)
-   rightwheel.reset_angle(0)
-   br.front_attachment.run_angle(1000,-20)
+   br.settings(straight_speed=250)
+    br.settings(straight_acceleration=500)
+    br.settings(turn_rate=150)
+    br.settings(turn_acceleration=400)
+    br.use_gyro(True)
+    br.reset()
+    
+    br.straight(-310-320, Stop.BRAKE)
+    br.turn(90, Stop.BRAKE)
+    br.straight(237.7, Stop.BRAKE)
+    br.turn (90.7)
+    br.straight (-177)
 
-
-
-
-   br.straight(310, Stop.BRAKE)
-   br.turn(113.7, Stop.BRAKE)
-   br.straight (-75)
-   br.turn (57.7, Stop.BRAKE)
-   br.straight(-56)
-   ###FReeze####
-   br.straight(-400, Stop.BRAKE)
-   br.turn(27.7, Stop.BRAKE)
-   br.straight(380.7, Stop.BRAKE)
-
-
-
-
-   br.turn (-22.7)
-
-
-   br.straight (57)
-
-
-
-
-
-
-
-
-
-
-
-
-   ###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   br.straight(-100  , Stop.BRAKE)
-   ###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-   #### FREEZE ###
-   br.front_attachment.run_angle(1000,75)
-   br.curve(100,20, Stop.BRAKE)
-   br.turn (11)
-   br.straight(100)
-   """
-   br.turn (-20)
-
-
-   br.straight (25)
-   br.turn (25)
-   """
-   hub.light.on(Color.RED)
-   br.straight (70)
-   """
-   br.turn (-40)
-   hub.light.on(Color.RED)
-
-
-   br.straight (180)
-   """
-   br.front_attachment.run_angle(1000,-80)
-   br.turn (120)
-   br.straight (300)
+    br.straight(177)
+    br.turn(-90.7)
+    br.straight(-237.7, Stop.BRAKE)
+    br.turn(-90, Stop.BRAKE)
+    br.straight(320+310, Stop.BRAKE)
 
 # Mission 6
 def WEST3(br):
