@@ -27,7 +27,7 @@ def WEST1(br):
 
 # Mission 5
 def WEST2(br):
-   br.settings(straight_speed=250)
+    br.settings(straight_speed=250)
     br.settings(straight_acceleration=500)
     br.settings(turn_rate=150)
     br.settings(turn_acceleration=400)
