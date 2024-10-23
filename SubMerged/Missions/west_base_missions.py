@@ -3,6 +3,20 @@ from BASEROBOT import *
 # Set up all devices.
 prime_hub = PrimeHub()
 
+
+##
+def WEST0(br: BaseRobot):   
+    br.straight(-322)
+    br.turn(92)
+    br.straight (-100 )
+
+    br.turn(21)
+
+
+    br.settings(straight_speed=67)
+    br.straight(-133)
+    br.straight(143) 
+
 # Collect corals and 1 Krill
 def WEST1(br):
    br.straight(230)
