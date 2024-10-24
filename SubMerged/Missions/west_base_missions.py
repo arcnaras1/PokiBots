@@ -6,17 +6,21 @@ prime_hub = PrimeHub()
 
 ##
 def WEST0(br: BaseRobot):   
-    br.straight(-322)
+    br.settings(straight_speed=200)
+    br.settings(straight_acceleration=400)
+    br.settings(turn_rate=110)
+    br.settings(turn_acceleration=400)
+    br.use_gyro(True)
+    
+    br.straight(322)
     br.turn(92)
-    br.straight (-100 )
+    br.straight (100 )
+    br.turn(23)
 
-    br.turn(21)
 
-
-    br.settings(straight_speed=67)
-    br.straight(-133)
-    br.straight(143) 
-
+    br.settings(straight_speed=60)
+    br.straight(95)
+    br.straight(-143) 
 # Collect corals and 1 Krill
 def WEST1(br):
    br.straight(230)
