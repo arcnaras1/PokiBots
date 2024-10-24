@@ -20,7 +20,12 @@ def WEST0(br: BaseRobot):
 
     br.settings(straight_speed=60)
     br.straight(95)
+    br.straight(-143)   
+    
+    br.settings(straight_speed=60)
+    br.straight(95)
     br.straight(-143) 
+
 # Collect corals and 1 Krill
 def WEST1(br):
    br.straight(230)
@@ -40,7 +45,14 @@ def WEST1(br):
 
 # Mission 5
 def WEST2(br):
-   br.straight(-310-320, Stop.BRAKE)
+   br.settings(straight_speed=150)
+br.settings(straight_acceleration=500)
+br.settings(turn_rate=50)
+br.settings(turn_acceleration=400)
+br.use_gyro(True)
+
+    
+    br.straight(-310-320, Stop.BRAKE)
    br.turn(90, Stop.BRAKE)
    br.straight(237.7, Stop.BRAKE)
    br.turn (90.7)
@@ -53,8 +65,6 @@ def WEST2(br):
    br.straight(320+310, Stop.BRAKE)
 # Mission 6
 def WEST3(br):
-
-
 
 
    br.straight(-322)
