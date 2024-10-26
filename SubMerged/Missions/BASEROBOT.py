@@ -13,7 +13,7 @@ class BaseRobot(DriveBase):
         self.back_attachment = Motor(back_attachment)
         super().__init__(self.leftwheel, self.rightwheel, wheel_diameter, axle_track)   
 
-    def turn_attachment(self, attach_motor, speed, degree):
+    def turn_attachment(self, attach_motor, speed, degree, wait_time=1000):
       async def turn_attachment_coroutine(attach_motor, speed, degree):
-         await multitask(attach_motor.run_angle(speed, degree, Stop.BRAKE), wait(1000), race=False)
+         await multitask(attach_motor.run_angle(speed, degree, Stop.BRAKE), wait(wait_time), race=False)
       run_task(turn_attachment_coroutine(attach_motor, speed, degree))  
