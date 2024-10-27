@@ -148,14 +148,14 @@ def WEST5(br):
    br.turn(8, Stop.BRAKE)
    br.straight(-220, Stop.BRAKE)
 
-def WEST6(br):
-   br.straight(-322)
-   br.turn(92)
-   br.straight (-100 )
+# def WEST6(br):
+#    br.straight(-322)
+#    br.turn(92)
+#    br.straight (-100 )
 
-   br.turn(21)
+#    br.turn(21)
 
 
-   br.settings(straight_speed=67)
-   br.straight(-133)
-   br.straight(143)
+#    br.settings(straight_speed=67)
+#    br.straight(-133)
+#    br.straight(143)
