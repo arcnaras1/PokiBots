@@ -3,7 +3,7 @@ from east_base_missions_linked import EAST1, EAST2, EAST3
 from west_base_missions import WEST1, WEST2, WEST3, WEST4, WEST5, WEST6
 
 br = BaseRobot(Port.B, Port.E, Port.F, Port.A, 56, 130)
-RunOrder = [WEST0, WEST1, WEST2, WEST3, WEST4, WEST5, WEST6, EAST1, EAST2, EAST3]
+RunOrder = [WEST0, WEST1, WEST2, WEST3, WEST4, WEST5, EAST1, EAST2, EAST3]
 #RunOrder = [lambda: br.hub.light.on(Color.BROWN), lambda: br.hub.light.on(Color.RED),lambda: br.hub.light.on(Color.GREEN)]
 mission_counter = 1
 while True:
