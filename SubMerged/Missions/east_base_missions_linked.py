@@ -82,6 +82,6 @@ def EAST3(br: BaseRobot):
     br.straight(300)
     br.back_attachment.run_angle(1000,150, Stop.BRAKE)
     br.turn(-10, Stop.BRAKE)
-    br.straight(8, Stop.BRAKE)
+    br.straight(25, Stop.BRAKE)
     br.turn_attachment(br.back_attachment, 1000, 950, wait_time=1500)
     br.back_attachment.run_angle(1000, -800)
