@@ -19,6 +19,7 @@ while True:
     
     if Button.BLUETOOTH in br.hub.buttons.pressed():
         RunOrder[mission_counter - 1](br)
+        br.stop()
     br.hub.display.number(mission_counter)
 """
 for k, mission_run in enumerate(RunOrder):
