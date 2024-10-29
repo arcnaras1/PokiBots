@@ -24,8 +24,11 @@ def WEST1(br: BaseRobot):
 def WEST2(br):
    #First Coral
    br.straight(350)
-   br.straight(-370)
-
+   br.turn(26)
+   br.turn_attachment(br.front_attachment, 570, 70)
+   br.turn(34)
+   br.straight(-480)
+  
 # Mission 5
 def WEST3(br):
     br.settings(straight_speed=250)
@@ -60,13 +63,13 @@ def WEST4(br):
    ############# Mission 1 #############
    br.straight(-490, Stop.BRAKE)
    br.turn(-70, Stop.BRAKE)
-   br.straight(-115, Stop.BRAKE)
+   br.straight(-118, Stop.BRAKE)
    br.straight(100, Stop.BRAKE)
    wait(100)
    
    ############# Mission 4 #############
-   br.turn(2.5, Stop.BRAKE)
-   br.turn_attachment(attachment_motor, 500, 135)
+   br.turn(2.7, Stop.BRAKE)
+   br.turn_attachment(attachment_motor, 200, 135)
    br.straight(-55)
    br.turn_attachment(attachment_motor, 1500, -135)
    wait(100)
@@ -84,10 +87,9 @@ def WEST4(br):
    wait(100)
    
    ############# Mission 3 #############
-   br.turn(30, Stop.BRAKE)
+   br.turn(31, Stop.BRAKE)
    br.straight(-30)
-   br.turn(60, Stop.BRAKE)
-   br.straight(-38)
+   br.turn(59.75, Stop.BRAKE)
    br.turn_attachment(attachment_motor, 500, 135)
    br.turn_attachment(attachment_motor, 500, -135)
    wait(100)
@@ -102,30 +104,18 @@ def WEST4(br):
 def WEST5(br):
    attachment_motor = br.front_attachment
    br.use_gyro(True)
-   br.reset()
    br.settings(straight_speed=300)
    br.settings(straight_acceleration=400)
    br.settings(turn_rate=200)
    br.settings(turn_acceleration=750)
-
-   br.straight(-140, Stop.BRAKE)
-   br.turn_attachment(attachment_motor, 1500, 155)
-   br.straight(175, Stop.BRAKE)
-   br.turn(-75, Stop.COAST)
-   while not any(prime_hub.buttons.pressed()):
-      wait(1)
+   br.reset()
+   ####MAIN CODE####
+   br.straight(-100)
+   br.turn_attachment(attachment_motor, 200, -200)
+   br.straight(-200)
+   
+   
+def WEST6(br):
    br.straight(190, Stop.BRAKE)
    br.turn(8, Stop.BRAKE)
    br.straight(-220, Stop.BRAKE)
-
-# def WEST6(br):
-#    br.straight(-322)
-#    br.turn(92)
-#    br.straight (-100 )
-
-#    br.turn(21)
-
-
-#    br.settings(straight_speed=67)
-#    br.straight(-133)
-#    br.straight(143)
