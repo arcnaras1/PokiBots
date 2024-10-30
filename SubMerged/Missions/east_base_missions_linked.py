@@ -103,8 +103,8 @@ def EAST5(br: BaseRobot):
     br.turn(47.5, Stop.BRAKE)
     br.straight(163, Stop.BRAKE)
 
-    br.straight(40, Stop.BRAKE)
-    br.straight(-40, Stop.BRAKE)
     br.straight(100, Stop.BRAKE)
+    br.straight(-100, Stop.BRAKE)
+    br.straight(200, Stop.BRAKE)
     br.turn(-50, Stop.BRAKE)
     br.straight(-500)
