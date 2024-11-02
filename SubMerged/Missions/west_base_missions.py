@@ -29,8 +29,7 @@ def WEST2(br):
    #First Coral
    br.straight(350)
    br.turn(26)
-   br.turn_attachment(br.front_attachment, 570, 70)
-   br.turn(34)
+   br.turn(26)
    br.straight(-480)
   
 # Mission 5
