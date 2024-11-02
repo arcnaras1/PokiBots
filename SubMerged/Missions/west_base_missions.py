@@ -16,9 +16,13 @@ def WEST1(br: BaseRobot):
    br.straight(95)
    br.straight(-143)   
    
-   br.settings(straight_speed=60)
-   br.straight(95)
-   br.straight(-143) 
+   br.straight (143)
+   br.straight (-95)
+   br.settings(straight_speed=130)
+   br.turn(-23)
+   br.straight(-100)
+   br.turn (-92)
+   br.straight (-322)
 
 # Collect corals and 1 Krill
 def WEST2(br):
