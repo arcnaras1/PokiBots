@@ -46,6 +46,7 @@ def EAST1(br: BaseRobot):
     br.turn(-20, Stop.BRAKE)
     br.straight(-100, Stop.BRAKE)
     br.front_attachment.run_angle(100, 85)
+    br.straight(-700)
 def EAST2(br: BaseRobot):
     br.settings(straight_speed=300)
     br.settings(straight_acceleration=600)
@@ -95,7 +96,7 @@ def EAST3(br: BaseRobot):
     br.straight(300)
     br.back_attachment.run_angle(1000,150, Stop.BRAKE)
     br.turn(-10, Stop.BRAKE)
-    br.straight(8, Stop.BRAKE)
+    br.straight(30, Stop.BRAKE)
     br.turn_attachment(br.back_attachment, 1000, 950, wait_time=1500)
     br.back_attachment.run_angle(1000, -800)
 def EAST4(br: BaseRobot):
@@ -113,11 +114,11 @@ def EAST5(br: BaseRobot):
 
     br.straight(437, Stop.BRAKE)
     br.settings(turn_rate=80)
-    br.turn(47.5, Stop.BRAKE)
-    br.straight(163, Stop.BRAKE)
-
+    br.turn(46, Stop.BRAKE)
     br.straight(100, Stop.BRAKE)
+
     br.straight(-100, Stop.BRAKE)
-    br.straight(200, Stop.BRAKE)
-    br.turn(-50, Stop.BRAKE)
-    br.straight(-500)
+    br.straight(100, Stop.BRAKE)
+    br.straight(-200, Stop.BRAKE)
+    br.turn(-160, Stop.BRAKE)
+    br.straight(-200)
