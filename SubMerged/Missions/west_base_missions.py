@@ -79,8 +79,7 @@ def WEST4(br):
    
    ############# Mission 2 #############
    br.straight(-8, Stop.BRAKE)
-   br.turn_attachment(attachment_motor, 1500, 80)
-   br.straight(53, Stop.BRAKE)
+   br.straight(50, Stop.BRAKE)
    br.turn(19, Stop.BRAKE)
    br.turn_attachment(attachment_motor, 1500, -130)
    br.straight(-43)
@@ -92,7 +91,7 @@ def WEST4(br):
    ############# Mission 3 #############
    br.turn(31, Stop.BRAKE)
    br.straight(-30)
-   br.turn(59.75, Stop.BRAKE)
+   br.turn(57, Stop.BRAKE)
    br.turn_attachment(attachment_motor, 500, 135)
    br.turn_attachment(attachment_motor, 500, -135)
    wait(100)
@@ -100,8 +99,6 @@ def WEST4(br):
    ############# Return to Base #############
    br.turn(110, Stop.BRAKE)
    br.straight(-520, Stop.BRAKE)
-    ############Return Seaweed#########
-   
 
 # Mission 1 part 2
 def WEST5(br):
