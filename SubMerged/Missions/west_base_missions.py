@@ -30,24 +30,32 @@ def WEST2(br):
   
 # Mission 5
 def WEST3(br):
-    br.settings(straight_speed=250)
-    br.settings(straight_acceleration=500)
-    br.settings(turn_rate=150)
-    br.settings(turn_acceleration=400)
-    br.use_gyro(True)
-    br.reset()
-    
-    br.straight(-310-320, Stop.BRAKE)
-    br.turn(90, Stop.BRAKE)
-    br.straight(237.7, Stop.BRAKE)
-    br.turn (90.7)
-    br.straight (-177)
+     br.straight(-322)
+   br.turn(92)
+   br.straight (-100 )
 
-    br.straight(177)
-    br.turn(-90.7)
-    br.straight(-237.7, Stop.BRAKE)
-    br.turn(-90, Stop.BRAKE)
-    br.straight(320+310, Stop.BRAKE)
+
+   br.turn(21)
+
+
+
+
+   br.settings(straight_speed=67)
+   br.straight(-133)
+   br.straight(143) 
+
+
+   ###FREZEEE LINEEE MISSION 6 ABOVE MISSON 7 BELOW
+   br.turn (153.9)
+   br.front_attachment.run_angle (1000,-80.7)
+   br.straight(60)
+   br.front_attachment.run_angle (300,20)
+   br.front_attachment.run_angle (1000,-60)
+   br.straight (-100)
+   #br.front_attachment.run_angle (1000,-25)
+   # br.settings(straight_speed=57)
+   br.turn (90)
+   br.straight (310)
          
 # Missions 1, 2, 3, 4
 def WEST4(br):
