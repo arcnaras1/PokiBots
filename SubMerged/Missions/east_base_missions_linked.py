@@ -54,7 +54,7 @@ def EAST2(br: BaseRobot):
     br.settings(turn_rate=110)
     br.settings(turn_acceleration=400)
     br.use_gyro(True)
-    br.straight (-1000, Stop.BRAKE)
+    br.straight (-710, Stop.BRAKE)
     br.straight (27, Stop.BRAKE)
     br.front_attachment.run_angle(100,-85)
     br.straight (125, Stop.BRAKE)
