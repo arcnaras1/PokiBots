@@ -1,3 +1,4 @@
+
 from BASEROBOT import *
 def EAST1(br: BaseRobot):
     br.settings(straight_speed=200)
@@ -115,9 +116,7 @@ def EAST5(br: BaseRobot):
     br.turn(-160, Stop.BRAKE)
     br.straight(-200)
 def EAST6(br:BaseRobot):
-    br.straight(-450)
-    br.turn(37)
-    br.front_attachment.run_angle(500, -100)
-    br.straight(100)
-    br.turn(-30)
-    br.straight(-450)
+    br.straight(460)
+    br.straight(-300)
+    br.turn(-20)
+    br.straight(-150)
