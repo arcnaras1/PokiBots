@@ -79,7 +79,7 @@ def WEST3(br):
          
 # Missions 1, 2, 3, 4
 def WEST4(br):
-   attachment_motor = br.front_attachment
+attachment_motor = br.front_attachment
 
    br.use_gyro(True)
    br.settings(straight_speed=300)
@@ -87,75 +87,57 @@ def WEST4(br):
    br.settings(turn_rate=200)
    br.settings(turn_acceleration=750)
    br.reset()
+
    ############# Mission 1 #############
    br.straight(-490, Stop.BRAKE)
    br.turn(-70, Stop.BRAKE)
-   br.straight(-115, Stop.BRAKE)
+   br.straight(-125, Stop.BRAKE)
    br.straight(100, Stop.BRAKE)
-   wait(100)
+   
    
    ############# Mission 4 #############
-   br.turn(2.5, Stop.BRAKE)
-   br.turn_attachment(attachment_motor, 500, 135)
-   br.straight(-55)
+   br.turn(5, Stop.BRAKE)
+   br.turn_attachment(attachment_motor, 200, 135)
+   br.straight(-50)
    br.turn_attachment(attachment_motor, 1500, -135)
-   wait(100)
    
    ############# Mission 2 #############
    br.straight(-8, Stop.BRAKE)
-   br.turn_attachment(attachment_motor, 1500, 80)
-   br.straight(53, Stop.BRAKE)
-   br.turn(19, Stop.BRAKE)
+   br.straight(40, Stop.BRAKE)
+   br.turn(16, Stop.BRAKE)
    br.turn_attachment(attachment_motor, 1500, -130)
-   br.straight(-43)
+   br.straight(-40)
    br.turn_attachment(attachment_motor, 1500, 130)
    br.turn_attachment(attachment_motor, 500, -135)
    br.straight(8, Stop.BRAKE)
-   wait(100)
    
    ############# Mission 3 #############
-   br.turn(30, Stop.BRAKE)
+   br.turn(31, Stop.BRAKE)
    br.straight(-30)
-   br.turn(60, Stop.BRAKE)
-   br.straight(-38)
+   br.turn(67, Stop.BRAKE)
    br.turn_attachment(attachment_motor, 500, 135)
    br.turn_attachment(attachment_motor, 500, -135)
-   wait(100)
+   
    
    ############# Return to Base #############
-   br.turn(110, Stop.BRAKE)
-   br.straight(-520, Stop.BRAKE)
-    ############Return Seaweed#########
+   br.turn(105, Stop.BRAKE)
+   br.straight(-560, Stop.BRAKE)
    
 
 # Mission 1 part 2
 def WEST5(br):
    attachment_motor = br.front_attachment
    br.use_gyro(True)
-   br.reset()
    br.settings(straight_speed=300)
    br.settings(straight_acceleration=400)
    br.settings(turn_rate=200)
    br.settings(turn_acceleration=750)
-
-   br.straight(-140, Stop.BRAKE)
-   br.turn_attachment(attachment_motor, 1500, 155)
-   br.straight(175, Stop.BRAKE)
-   br.turn(-75, Stop.COAST)
-   while not any(prime_hub.buttons.pressed()):
-      wait(1)
-   br.straight(190, Stop.BRAKE)
-   br.turn(8, Stop.BRAKE)
-   br.straight(-220, Stop.BRAKE)
+   br.reset()
+   ####MAIN CODE####
+   br.straight(-100)
+   br.turn_attachment(attachment_motor, 200, -200)
+   br.straight(-200)
 
 def WEST6(br):
-   br.straight(-322)
-   br.turn(92)
-   br.straight (-100 )
-
-   br.turn(21)
-
-
-   br.settings(straight_speed=67)
-   br.straight(-133)
-   br.straight(143)
+   br.straight(180, Stop.BRAKE)
+   br.straight(-220, Stop.BRAKE)
