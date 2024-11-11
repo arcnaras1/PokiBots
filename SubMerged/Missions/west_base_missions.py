@@ -112,5 +112,7 @@ def WEST4(br):
 
 # Put Coral back on the Map
 def WEST5(br):
+   br.settings(straight_speed = 20)
    br.straight(180, Stop.BRAKE)
+   br.settings(straight_speed = 100)
    br.straight(-220, Stop.BRAKE)
