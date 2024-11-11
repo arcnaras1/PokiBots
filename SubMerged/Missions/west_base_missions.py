@@ -50,7 +50,7 @@ def WEST2(br):
     br.straight(320+310, Stop.BRAKE) 
 
 # Missions 1, 2, 3, 4
-def WEST4(br):
+def WEST3(br):
    attachment_motor = br.front_attachment
 
    br.use_gyro(True)
@@ -97,7 +97,7 @@ def WEST4(br):
    
 
 # Mission 1 part 2
-def WEST5(br):
+def WEST4(br):
    attachment_motor = br.front_attachment
    br.use_gyro(True)
    br.settings(straight_speed=300)
@@ -111,6 +111,6 @@ def WEST5(br):
    br.straight(-200)
 
 # Put Coral back on the Map
-def WEST6(br):
+def WEST5(br):
    br.straight(180, Stop.BRAKE)
    br.straight(-220, Stop.BRAKE)
