@@ -61,14 +61,14 @@ def WEST3(br):
    br.reset()
 
    ############# Mission 1 #############
-   br.straight(-490, Stop.BRAKE)
+   br.straight(-475, Stop.BRAKE)
    br.turn(-70, Stop.BRAKE)
    br.straight(-130, Stop.BRAKE)
    br.straight(100, Stop.BRAKE)
    
    
    ############# Mission 4 #############
-   br.turn(5, Stop.BRAKE)
+   br.turn(8, Stop.BRAKE)
    br.turn_attachment(attachment_motor, 200, 135)
    br.straight(-50)
    br.turn_attachment(attachment_motor, 1500, -135)
