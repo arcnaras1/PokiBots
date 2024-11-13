@@ -124,3 +124,8 @@ def EAST6(br:BaseRobot):
     br.straight(-300)
     br.turn(-20)
     br.straight(-150)
+def EAST7(br:BaseRobot):
+    br.straight(-500)
+    br.straight(100)
+    br.turn(-30)
+    br.straight(-800)
