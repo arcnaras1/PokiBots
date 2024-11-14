@@ -82,7 +82,7 @@ def WEST3(br):
    br.straight(8, Stop.BRAKE)
    
    ############# Mission 3 #############
-   br.turn(31, Stop.BRAKE)
+   br.turn(30, Stop.BRAKE)
    br.straight(-27)
    br.turn(65, Stop.BRAKE)
    br.straight(-8)
