@@ -1,25 +1,5 @@
 from BASEROBOT import *
 
-# Mission 6
-def WEST0(br: BaseRobot):
-   br.settings(straight_speed=200)
-   br.settings(straight_acceleration=400)
-   br.settings(turn_rate=110)
-   br.settings(turn_acceleration=400)
-   br.use_gyro(True)
-   
-   br.straight(322)
-   br.turn(92)
-   br.straight (100 )
-   br.turn(23)
-   br.settings(straight_speed=60)
-   br.straight(95)
-   br.straight(-143)   
-   
-   br.settings(straight_speed=60)
-   br.straight(95)
-   br.straight(-143) 
-
 # Collect corals and 1 Krill
 def WEST1(br):
    #First Coral
@@ -28,26 +8,44 @@ def WEST1(br):
    br.turn(-26)
    br.straight(-480)
 
-# Mission 5
+# Mission 5,6
 def WEST2(br):
-    br.settings(straight_speed=250)
-    br.settings(straight_acceleration=500)
-    br.settings(turn_rate=150)
-    br.settings(turn_acceleration=400)
-    br.use_gyro(True)
-    br.reset()
-    
-    br.straight(-310-320, Stop.BRAKE)
-    br.turn(90, Stop.BRAKE)
-    br.straight(237.7, Stop.BRAKE)
-    br.turn (90.7)
-    br.straight (-177)
-
-    br.straight(177)
-    br.turn(-90.7)
-    br.straight(-237.7, Stop.BRAKE)
-    br.turn(-90, Stop.BRAKE)
-    br.straight(320+310, Stop.BRAKE) 
+    def WEST1(br: BaseRobot):
+   br.settings(straight_speed=300)
+   #br.settings(straight_acceleration=400)
+   br.settings(straight_acceleration=700)
+   br.settings(turn_rate=110)
+   br.settings(turn_acceleration=400)
+   br.use_gyro(True)
+   br.hub.imu.reset_heading(0)
+   """
+   br.straight(280)
+   br.turn (40)
+   br.straight (118)
+   """
+   br.straight(322)
+   br.turn(96)
+   br.straight (100 )
+   br.turn(16)
+   br.settings(straight_speed=43)
+   br.straight(140.7)
+   br.turn (70)  
+   br.hub.light.on(Color.MAGENTA)
+   br.settings(straight_speed=600)
+   br.straight (100)
+   br.turn(93.5)
+   br.straight (-500)
+   br.turn(225.7)
+   br.hub.light.on(Color.RED)
+   br.settings(straight_speed=350)
+   br.straight(-345, Stop.BRAKE)
+   br.turn (-35.7)
+   br.straight (-70)
+   br.straight (125)
+   br.turn (-120)
+   br.straight (-200)
+   br.turn (-85)
+   br.straight (637.777)
 
 # Missions 1, 2, 3, 4
 def WEST3(br):
