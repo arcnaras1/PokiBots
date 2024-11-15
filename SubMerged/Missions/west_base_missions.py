@@ -49,6 +49,8 @@ def WEST2(br):
 
 # Missions 1, 2, 3, 4
 def WEST3(br):
+   # Missions 1, 2, 3, 4
+def WEST3(br):
    attachment_motor = br.front_attachment
 
    br.use_gyro(True)
@@ -82,10 +84,10 @@ def WEST3(br):
    br.straight(8, Stop.BRAKE)
    
    ############# Mission 3 #############
-   br.turn(30, Stop.BRAKE)
-   br.straight(-27)
-   br.turn(65, Stop.BRAKE)
-   br.straight(-8)
+   br.turn(28, Stop.BRAKE)
+   br.straight(-28)
+   br.turn(64, Stop.BRAKE)
+   br.straight(-11)
    br.turn_attachment(attachment_motor, 500, 135)
    br.turn_attachment(attachment_motor, 500, -135)
    
