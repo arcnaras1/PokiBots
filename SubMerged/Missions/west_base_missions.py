@@ -47,8 +47,6 @@ def WEST2(br):
    br.turn (-85)
    br.straight (637.777)
 
-# Missions 1, 2, 3, 4
-def WEST3(br):
    # Missions 1, 2, 3, 4
 def WEST3(br):
    attachment_motor = br.front_attachment
