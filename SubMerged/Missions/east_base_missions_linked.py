@@ -141,6 +141,7 @@ def EAST3(br: BaseRobot):
     br.straight(-100, Stop.BRAKE)
     while not (-99 < br.hub.imu.heading() < -97):
         br.drive(0, (-98 - br.hub.imu.heading()) * 3)
+    br.turn(-1.5, Stop.BRAKE)
     br.straight(300, Stop.BRAKE)
     br.straight(-120, Stop.BRAKE)
     # print(br.hub.imu.heading())
@@ -157,7 +158,6 @@ def EAST3(br: BaseRobot):
     br.turn(20, Stop.BRAKE)
     br.straight(-500, Stop.BRAKE)
     """
-    
 def EAST4(br: BaseRobot):
     br.straight(400)
     br.turn(45)
