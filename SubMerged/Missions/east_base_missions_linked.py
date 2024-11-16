@@ -158,6 +158,7 @@ def EAST3(br: BaseRobot):
     br.turn(20, Stop.BRAKE)
     br.straight(-500, Stop.BRAKE)
     """
+    
 def EAST4(br: BaseRobot):
     br.straight(400)
     br.turn(45)
