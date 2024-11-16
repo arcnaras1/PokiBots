@@ -81,7 +81,7 @@ def EAST2(br: BaseRobot):
     br.settings(turn_rate=700)
     br.settings(turn_acceleration=100)
     br.use_gyro(True)
-    # br.hub.imu.reset_heading(0)
+    br.hub.imu.reset_heading(0)
     br.reset()
 
     # The main program starts here.
@@ -90,10 +90,10 @@ def EAST2(br: BaseRobot):
     br.straight(-140, Stop.BRAKE)
     br.turn(70, Stop.BRAKE)
     br.straight(-90, Stop.BRAKE)
-    br.turn(-40, Stop.BRAKE)
+    br.turn(-45, Stop.BRAKE)
     br.straight(7, Stop.BRAKE)
     br.front_attachment.run_angle(100,-85)
-    br.straight(100, Stop.BRAKE)
+    br.straight(110, Stop.BRAKE)
     br.front_attachment.run_angle(100, 85 )
     br.straight(90, Stop.BRAKE)
     br.turn(50, Stop.BRAKE)
