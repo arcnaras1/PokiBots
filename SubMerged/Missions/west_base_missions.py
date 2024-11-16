@@ -10,7 +10,7 @@ def WEST1(br):
 
 # Mission 5,shRK DROPPOFF
 def WEST2(br):
-    br.settings(straight_speed=400)
+   br.settings(straight_speed=400)
    #br.settings(straight_acceleration=400)
    br.settings(straight_acceleration=700)
    br.settings(turn_rate=110)
@@ -23,8 +23,12 @@ def WEST2(br):
    br.straight (118)
    """
    br.straight (-570)
+   br.settings(turn_rate=75)
+   br.settings(turn_acceleration=150)
    br.turn(-85.77)
    br.straight (-40)
+   br.settings(turn_rate=110)
+   br.settings(turn_acceleration=400)
    br.straight (78.77)
    br.turn (-90)
    br.straight (-450)
@@ -33,7 +37,7 @@ def WEST2(br):
    br.straight(157)
    br.turn(96)
    br.straight (100)
-   br.turn(22.77)
+   br.turn(29.77)
    br.settings(straight_speed=43)
    br.straight(120.7)
    br.turn (70)  
@@ -69,24 +73,24 @@ def WEST3(br):
    ############# Mission 2 #############
    br.straight(-8, Stop.BRAKE)
    br.straight(40, Stop.BRAKE)
-   br.turn(15.78, Stop.BRAKE)
-   br.turn_attachment(attachment_motor, 1500, -130)
+   br.turn(19, Stop.BRAKE)
+   br.turn_attachment(attachment_motor, 1800, -130)
    br.straight(-50)
    br.turn_attachment(attachment_motor, 1500, 130)
    br.turn_attachment(attachment_motor, 500, -135)
    br.straight(8, Stop.BRAKE)
    
    ############# Mission 3 #############
-   br.turn(28, Stop.BRAKE)
+   br.turn(26.5, Stop.BRAKE)
    br.straight(-28)
    br.turn(64, Stop.BRAKE)
-   br.straight(-11)
+   br.straight(-13)
    br.turn_attachment(attachment_motor, 500, 135)
    br.turn_attachment(attachment_motor, 500, -135)
    
    
    ############# Return to Base #############
-   br.turn(108, Stop.BRAKE)
+   br.turn(118, Stop.BRAKE)
    br.straight(-562, Stop.BRAKE)
 
 # Mission 1 part 2
@@ -106,6 +110,6 @@ def WEST4(br):
 # Put Coral back on the Map
 def WEST5(br):
    br.settings(straight_speed = 20)
-   br.straight(180, Stop.BRAKE)
+   br.straight(40, Stop.BRAKE)
    br.settings(straight_speed = 100)
-   br.straight(-220, Stop.BRAKE)
+   br.straight(-100, Stop.BRAKE)
