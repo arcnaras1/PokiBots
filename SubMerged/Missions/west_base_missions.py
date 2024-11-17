@@ -90,7 +90,7 @@ def WEST3(br):
    
    
    ############# Return to Base #############
-   br.turn(118, Stop.BRAKE)
+   br.turn(113, Stop.BRAKE)
    br.straight(-562, Stop.BRAKE)
 
 # Mission 1 part 2
