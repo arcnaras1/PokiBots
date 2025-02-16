@@ -1,10 +1,12 @@
 from BASEROBOT import *
-from east_base_missions_linked import EAST1, EAST2, EAST3, EAST4, EAST5, EAST6
-from west_base_missions import WEST1, WEST2, WEST3, WEST4, WEST5
+#from east_base_missions_linked import EAST1, EAST2, EAST3, EAST4, EAST5, EAST6, EAST7
+#from west_base_missions import WEST1, WEST2, WEST3, WEST4, WEST5
+from EAST_BASE_REGIONALS import *
 
-br = BaseRobot(Port.B, Port.E, Port.F, Port.A, 56, 130)
-RunOrder = [WEST1, WEST2, WEST3, WEST4, WEST5, EAST1, EAST2, EAST3, EAST4, EAST5, EAST6]
+br = BaseRobot(Port.E, Port.C, Port.A, Port.D, 56, 81)
+#RunOrder = [WEST1, WEST2, WEST3, WEST4, WEST5, EAST1, EAST2, EAST3, EAST4, EAST5, EAST6, EAST7]
 #RunOrder = [lambda: br.hub.light.on(Color.BROWN), lambda: br.hub.light.on(Color.RED),lambda: br.hub.light.on(Color.GREEN)]
+RunOrder = [EAST1,]
 mission_counter = 1
 while True:
     if Button.RIGHT in br.hub.buttons.pressed():
