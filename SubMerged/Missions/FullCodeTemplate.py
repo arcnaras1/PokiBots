@@ -1,12 +1,9 @@
 from BASEROBOT import *
-#from east_base_missions_linked import EAST1, EAST2, EAST3, EAST4, EAST5, EAST6, EAST7
-#from west_base_missions import WEST1, WEST2, WEST3, WEST4, WEST5
-from EAST_BASE_REGIONALS import *
-
+from east_base_missions_linked import EAST1, EAST2, EAST3, EAST4, EAST5, EAST6
+from west_base_missions import WEST0, WEST1
 br = BaseRobot(Port.E, Port.C, Port.A, Port.D, 56, 81)
-#RunOrder = [WEST1, WEST2, WEST3, WEST4, WEST5, EAST1, EAST2, EAST3, EAST4, EAST5, EAST6, EAST7]
+RunOrder = [WEST0, WEST1, EAST1, EAST2, EAST3, EAST4, EAST5, EAST6]
 #RunOrder = [lambda: br.hub.light.on(Color.BROWN), lambda: br.hub.light.on(Color.RED),lambda: br.hub.light.on(Color.GREEN)]
-RunOrder = [EAST1,]
 mission_counter = 1
 while True:
     if Button.RIGHT in br.hub.buttons.pressed():
@@ -20,6 +17,7 @@ while True:
         wait(250)
     
     if Button.BLUETOOTH in br.hub.buttons.pressed():
+        br.use_gyro(True)
         RunOrder[mission_counter - 1](br)
         br.stop()
     br.hub.display.number(mission_counter)
