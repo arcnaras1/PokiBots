@@ -1,0 +1,50 @@
+if __name__ == "__main__":
+   import FullCodeTemplate
+
+from BASEROBOT import *
+# Collect corals and 1 Krill
+def WEST2(br):
+   br.hub.imu.reset_heading(0)
+   br.use_gyro(True)
+   br.straight(1000, Stop.BRAKE)
+   br.straight(-200, Stop.BRAKE)
+   br.turn(50, Stop.BRAKE)
+   br.straight(100, Stop.BRAKE)
+   br.turn(-47, Stop.BRAKE)
+   br.straight(350, Stop.BRAKE)
+   br.straight(-300, Stop.BRAKE)
+   br.turn(-70, Stop.BRAKE)
+   br.straight(350, Stop.BRAKE)
+   br.turn(65, Stop.BRAKE)
+   br.straight(900, Stop.BRAKE)
+def WEST0(br):
+   br.use_gyro(True)
+   br.hub.imu.reset_heading(0)
+   br.straight(-300, Stop.BRAKE)
+   br.turn(-85, Stop.BRAKE)
+   br.straight(-400, Stop.BRAKE)
+   br.turn(70, Stop.BRAKE)
+   br.straight(70, Stop.BRAKE)
+   br.turn(23, Stop.BRAKE)
+   br.settings(straight_speed=200)
+   br.straight(-300, Stop.BRAKE)
+   br.straight(150, Stop.BRAKE)
+   br.turn(-55, Stop.BRAKE)
+   br.straight(600, Stop.BRAKE)
+def WEST1(br):
+   br.hub.imu.reset_heading(0)
+   br.use_gyro(True)
+   br.settings(straight_speed=100)
+   br.straight(250)
+   br.straight(-250)
+   while not (-1 < br.hub.imu.heading() < 1):
+      br.drive(0, br.hub.imu.heading() * -3)
+   br.straight(520)
+def WEST3(br):
+   br.hub.imu.reset_heading(0)
+   br.straight(800, Stop.BRAKE)
+   br.straight(-200, Stop.BRAKE)
+   br.straight(200, Stop.BRAKE)
+   br.straight(-150, Stop.BRAKE)
+   br.turn(-80, Stop.BRAKE)
+   br.straight(300, Stop.BRAKE)
