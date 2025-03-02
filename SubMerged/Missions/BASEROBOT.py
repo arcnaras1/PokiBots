@@ -5,12 +5,12 @@ from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch, multitask, run_task, wait
 
 class BaseRobot(DriveBase):
-    def __init__(self, leftwheel: Port, rightwheel: Motor, front_attachment: Port, back_attachment: Port, wheel_diameter, axle_track):
+    def __init__(self, leftwheel: Port, rightwheel: Motor, left_attachment: Port, right_attachment: Port, wheel_diameter, axle_track):
         self.hub = PrimeHub()
         self.rightwheel = Motor(rightwheel)
         self.leftwheel = Motor(leftwheel, Direction.COUNTERCLOCKWISE)
-        self.front_attachment = Motor(front_attachment)
-        self.back_attachment = Motor(back_attachment)
+        self.left_attachment = Motor(left_attachment)
+        self.right_attachment = Motor(right_attachment)
         super().__init__(self.leftwheel, self.rightwheel, wheel_diameter, axle_track)   
 
     def turn_attachment(self, attach_motor, speed, degree, wait_time=1000):
