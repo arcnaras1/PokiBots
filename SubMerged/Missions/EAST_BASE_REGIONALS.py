@@ -58,7 +58,7 @@ def EAST3(br: BaseRobot):
    br.turn(52, Stop.BRAKE)
    current = 0
    while sorted([51, (current := br.hub.imu.heading()), 53])[1] != current:
-    br.drive(0, (54 - current))
+     br.drive(0, (54 - current) * -3)
    #earlier = br.hub.imu.heading()
    print("Start of delay?")
    br.stop()
