@@ -4,19 +4,21 @@ from BASEROBOT import *
 
 #East Base Collection / Clear the Way
 def EAST1(br: BaseRobot):
-    br.settings(straight_speed=500)
-    br.settings(straight_acceleration=500)
+    br.settings(straight_speed=650)
+    br.settings(straight_acceleration=600)
     br.settings(turn_rate=350)
     br.settings(turn_acceleration=500)
     br.use_gyro(True)
 
     
     br.straight (390)
-    br.turn(29)
+    br.turn(36)
     br.straight(170)
-    br.turn(19)
-    br.straight(200)
-    br.turn (-20)
+    br.turn(-27)
+    br.straight(120)
+    br.turn (54)
+    br.straight (130)
+    br.turn (-50)
     br.straight(-1000)
 
 #Sonar
