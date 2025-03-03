@@ -18,7 +18,7 @@ def EAST1(br: BaseRobot):
     br.straight(120)
     br.turn (54)
     br.straight (130)
-    br.turn (-50)
+    br.turn (-40)
     br.straight(-1000)
 
 #Sonar
@@ -42,31 +42,31 @@ def EAST2(br: BaseRobot):
     br.straight(-800, Stop.BRAKE)
 
 # feed the whale
+
 def EAST3(br: BaseRobot):
 
    br.settings(straight_speed=150)
    br.settings(straight_acceleration=250)
-   br.settings(turn_rate=200)
+   br.settings(turn_rate=300)
    br.settings(turn_acceleration=300)
    br.hub.imu.reset_heading(0)
-   br.turn(-20, Stop.BRAKE)
-   br.straight(-570, Stop.BRAKE)
+   br.turn(-35, Stop.BRAKE)
+   br.straight(-600, Stop.BRAKE)
    br.settings(straight_speed=500)
    br.settings(straight_acceleration=300)
    #br.turn(-5, Stop.BRAKE)
    br.hub.imu.reset_heading(0)
-   br.turn(52, Stop.BRAKE)
+   br.turn(60, Stop.BRAKE)
    current = 0
-   while sorted([51, (current := br.hub.imu.heading()), 53])[1] != current:
-     br.drive(0, (54 - current) * -3)
+   while sorted([59, (current := br.hub.imu.heading()), 61])[1] != current:
+    br.drive(0, (60 - current) * 2)
    #earlier = br.hub.imu.heading()
    print("Start of delay?")
    br.stop()
    br.settings(straight_acceleration=400, straight_speed = 500)
-   br.straight(-370, Stop.BRAKE)
+   br.straight(-480, Stop.BRAKE)
    wait(2000)
    br.straight(100, Stop.BRAKE)
-
 # Change Shipping Lanes 
 def EAST4(br: BaseRobot):
    br.settings(straight_speed=300)
