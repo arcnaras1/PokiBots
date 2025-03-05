@@ -176,13 +176,14 @@ def EAST5(br):
     # br.straight (-200)
 
 
-def EAST6(br):
-    br.settings(straight_speed=400)  # ORIGINAL WAS 250
+   def EAST6(br):
+    br.settings(straight_speed=350)
     br.settings(straight_acceleration=500)
     br.settings(turn_rate=150)
     br.settings(turn_acceleration=400)
     br.use_gyro(True)
-
+    br.hub.imu.reset_heading(0)
+    
     br.left_attachment.run_angle(700,-905)
     br.straight (270, Stop.BRAKE)
     br.turn(-40, Stop.BRAKE)
@@ -200,5 +201,5 @@ def EAST6(br):
     wait(500)
     br.straight(-240)
     br.turn(-59.5)
-    br.straight (450)
-    br.straight (-300)
+    br.straight (395)
+    br.straight (-255)
