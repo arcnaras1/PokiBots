@@ -92,33 +92,46 @@ def EAST4(br: BaseRobot):
 
 #Prapti Combo
 def EAST5(br):
-    br.settings(straight_speed=350)  # ORIGINAL WAS 250
+    br.settings(straight_speed=400)  # ORIGINAL WAS 250
     br.settings(straight_acceleration=500)
     br.settings(turn_rate=150)
     br.settings(turn_acceleration=400)
     br.use_gyro(True)
-    br.hub.imu.reset_heading(0)
-    
-    br.front_attachment.run_angle(700,-905)
-    br.straight (270, Stop.BRAKE)
+
+    br.straight (260, Stop.BRAKE, wait=False)
+    br.left_attachment.run_angle(700, -905)
     br.turn(-40, Stop.BRAKE)
     br.straight(270, Stop.BRAKE)
-    br.straight(-150, Stop.BRAKE)
-    br.turn(35, Stop.BRAKE)
+    br.straight(-135, Stop.BRAKE)
+    br.turn(83, Stop.BRAKE)
+    br.settings(straight_speed=250) 
+    br.straight (215, Stop.HOLD)
+    br.settings(straight_speed=400) 
+    br.right_attachment.run_angle(500, 300)
+    br.settings(turn_rate=400)
+    br.settings(turn_acceleration=300)
+    br.turn(30, Stop.NONE)
+    br.settings(turn_rate=75)
+    br.turn(15,Stop.BRAKE, wait=False)
+    br.straight(-10)
+    br.right_attachment.run_angle(500, -300)
+    br.straight(-30, Stop.BRAKE)
+    br.turn(-120)
+    br.settings(straight_speed=400)  # ORIGINAL WAS 250
+    br.settings(straight_acceleration=500)
+    br.settings(turn_rate=150)
+    br.settings(turn_acceleration=400)
+    br.use_gyro(True)
+    br.straight (110)
+    return
+    br.turn(-96.7)
     br.straight(375, Stop.BRAKE)
-    br.turn (-85, Stop.BRAKE)
-    # br.hub.imu.reset_heading(0)
+    br.turn (40, Stop.BRAKE)
+    br.left_attachment.run_angle(700, 905)
+    br.straight(250, Stop.BRAKE)
+    #br.turn(54.78)
     
-
-    # br.straight(250, Stop.BRAKE)
-    # current = 0
-    # while (-1 < (current := br.hub.imu.heading()) < 1):
-    #     br.drive(0, current * -3)
-
-    # br.hub.imu.reset_heading(0)
-    br.turn(51.78)
-    # while (53.2 < (current := br.hub.imu.heading()) < 56.1):
-    #     br.drive(0, (current - 54.78) * -3)
+    return
     br.straight(170)
     br.front_attachment.run_angle(700,1000)
     br.straight(50)
@@ -128,3 +141,64 @@ def EAST5(br):
     br.turn(-59.5)
     br.straight (350)
     br.straight (-200)
+    
+    
+    
+    
+    # br.front_attachment.run_angle(700,-905)
+    # br.straight (270, Stop.BRAKE)
+    # br.turn(-40, Stop.BRAKE)
+    # br.straight(270, Stop.BRAKE)
+    # br.straight(-150, Stop.BRAKE)
+    # br.turn(35, Stop.BRAKE)
+    # br.straight(375, Stop.BRAKE)
+    # br.turn (-85, Stop.BRAKE)
+    # # br.hub.imu.reset_heading(0)
+    
+
+    # # br.straight(250, Stop.BRAKE)
+    # # current = 0
+    # # while (-1 < (current := br.hub.imu.heading()) < 1):
+    # #     br.drive(0, current * -3)
+
+    # # br.hub.imu.reset_heading(0)
+    # br.turn(51.78)
+    # # while (53.2 < (current := br.hub.imu.heading()) < 56.1):
+    # #     br.drive(0, (current - 54.78) * -3)
+    # br.straight(170)
+    # br.front_attachment.run_angle(700,1000)
+    # br.straight(50)
+    # br.front_attachment.run_angle(700,-470)
+    # wait(500)
+    # br.straight(-240)
+    # br.turn(-59.5)
+    # br.straight (350)
+    # br.straight (-200)
+
+
+def EAST6(br):
+    br.settings(straight_speed=400)  # ORIGINAL WAS 250
+    br.settings(straight_acceleration=500)
+    br.settings(turn_rate=150)
+    br.settings(turn_acceleration=400)
+    br.use_gyro(True)
+
+    br.left_attachment.run_angle(700,-905)
+    br.straight (270, Stop.BRAKE)
+    br.turn(-40, Stop.BRAKE)
+    br.straight(270, Stop.BRAKE)
+    br.straight(-150, Stop.BRAKE)
+    br.turn(35, Stop.BRAKE)
+    br.straight(375, Stop.BRAKE)
+    br.turn (-85, Stop.BRAKE)
+    br.straight(250, Stop.BRAKE)
+    br.turn(54.78)
+    br.straight(170)
+    br.left_attachment.run_angle(700,1000)
+    br.straight(50)
+    br.left_attachment.run_angle(700,-470)
+    wait(500)
+    br.straight(-240)
+    br.turn(-59.5)
+    br.straight (450)
+    br.straight (-300)
