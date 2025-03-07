@@ -22,24 +22,31 @@ def EAST1(br: BaseRobot):
     br.straight(-1000)
 
 #Sonar
-def EAST2(br: BaseRobot):   
-    br.settings(straight_speed=200)
-    br.settings(straight_acceleration=200)
-    br.settings(turn_rate=150)
-    br.settings(turn_acceleration=400)
-    br.use_gyro(True)
-    br.hub.imu.reset_heading(0)
-    br.turn(-25, Stop.BRAKE)
-    br.straight(800, Stop.BRAKE)
-    br.turn(30, Stop.BRAKE)
-    br.straight(-20, Stop.BRAKE)
-    br.left_attachment.run_angle(3000, 4800)
-    br.left_attachment.run_angle(3000, -2800)
-    br.straight(-10, Stop.BRAKE)
-    br.turn(-50, Stop.BRAKE)
-    br.settings(straight_speed=400)
-    br.settings(straight_acceleration=400)
-    br.straight(-800, Stop.BRAKE)
+def EAST3(br: BaseRobot):
+
+   br.settings(straight_speed=350)
+   br.settings(straight_acceleration=350)
+   br.settings(turn_rate=200)
+   br.settings(turn_acceleration=300)
+   br.hub.imu.reset_heading(0)
+   br.straight(-10, Stop.BRAKE)
+   br.turn(-20, Stop.BRAKE)
+   br.straight(-690, Stop.BRAKE)
+   br.settings(straight_speed=500)
+   br.settings(straight_acceleration=300)
+   #br.turn(-5, Stop.BRAKE)
+   br.hub.imu.reset_heading(0)
+   br.turn(51, Stop.BRAKE)
+   current = 0
+   while sorted([50, (current := br.hub.imu.heading()), 52])[1] != current:
+    br.drive(0, (51 - current) * 3)
+   #earlier = br.hub.imu.heading()
+   print("Start of delay?")
+   br.stop()
+   br.settings(straight_acceleration=400, straight_speed = 500)
+   br.straight(-370, Stop.BRAKE)
+   wait(2000)
+   br.straight(100, Stop.BRAKE)
 
 # feed the whale
 
