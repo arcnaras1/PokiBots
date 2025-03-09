@@ -21,6 +21,7 @@ def EAST1(br: BaseRobot):
     br.turn (-40)
     br.straight(-1000)
 
+#Sonar
 def EAST2(br: BaseRobot):   
     """
     br.settings(straight_speed=200)
@@ -69,10 +70,10 @@ def EAST2(br: BaseRobot):
     br.use_gyro(True)
     br.hub.imu.reset_heading(0)
     br.turn(-25, Stop.BRAKE)
-    br.straight(800, Stop.BRAKE)
+    br.straight(837, Stop.BRAKE)
     br.settings(turn_rate=250)
     br.settings(turn_acceleration=400)
-    br.turn(30, Stop.BRAKE)
+    br.turn(35, Stop.BRAKE)
     br.straight(-20, Stop.BRAKE)
     br.left_attachment.run_angle(5000, 2000, Stop.NONE)
     br.left_attachment.run_angle(6000, 250)
@@ -82,45 +83,19 @@ def EAST2(br: BaseRobot):
     br.settings(straight_speed=500)
     br.settings(straight_acceleration=500)
     br.straight(-200, Stop.NONE)
-    br.turn(15, Stop.NONE)
-    br.straight(-500, Stop.NONE)
-
-# feed the whale
-
-def EAST3(br: BaseRobot):
-
-   br.settings(straight_speed=150)
-   br.settings(straight_acceleration=250)
-   br.settings(turn_rate=300)
-   br.settings(turn_acceleration=300)
-   br.hub.imu.reset_heading(0)
-   br.turn(-35, Stop.BRAKE)
-   br.straight(-600, Stop.BRAKE)
-   br.settings(straight_speed=500)
-   br.settings(straight_acceleration=300)
-   #br.turn(-5, Stop.BRAKE)
-   br.hub.imu.reset_heading(0)
-   br.turn(60, Stop.BRAKE)
-   current = 0
-   while sorted([59, (current := br.hub.imu.heading()), 61])[1] != current:
-    br.drive(0, (60 - current) * 2)
-   #earlier = br.hub.imu.heading()
-   print("Start of delay?")
-   br.stop()
-   br.settings(straight_acceleration=400, straight_speed = 500)
-   br.straight(-480, Stop.BRAKE)
-   wait(2000)
-   br.straight(100, Stop.BRAKE)
+    br.turn(40, Stop.BRAKE)
+    br.straight(-580, Stop.NONE)
 # Change Shipping Lanes 
 def EAST4(br: BaseRobot):
-   br.settings(straight_speed=300)
-   br.settings(straight_acceleration=300)
+   br.settings(straight_speed=400)
+   br.settings(straight_acceleration=400)
    br.settings(turn_rate=200)
    br.settings(turn_acceleration=100)
-   br.straight(495, Stop.BRAKE)
+   br.straight(465, Stop.HOLD)
    br.turn(35, Stop.BRAKE)
+   br.straight(50, Stop.BRAKE)
+   br.right_attachment.run_angle(500, 300, wait=False)
    br.straight(30, Stop.BRAKE)
-   br.right_attachment.run_angle(500, 300)
    br.settings(turn_rate=400)
    br.settings(turn_acceleration=300)
    br.turn(30, Stop.NONE)
@@ -129,8 +104,10 @@ def EAST4(br: BaseRobot):
    br.straight(-10)
    br.right_attachment.run_angle(500, -300)
    br.straight(-30, Stop.BRAKE)
-   br.turn(75,Stop.BRAKE)
-   br.straight(300, Stop.BRAKE)
+   br.settings(turn_rate=300)
+   br.settings(turn_acceleration=300)
+   br.turn(75,Stop.NONE)
+   br.straight(450, Stop.NONE)
    #while not ((goal - 2) < br.hub.imu.heading() < (goal + 2)):
     #  br.drive(0, (goal - br.hub.imu.heading()) * 3)
 
@@ -220,7 +197,7 @@ def EAST5(br):
     # br.straight (-200)
 
 
-   def EAST6(br):
+def EAST6(br):
     br.settings(straight_speed=350)
     br.settings(straight_acceleration=500)
     br.settings(turn_rate=150)
@@ -237,13 +214,14 @@ def EAST5(br):
     br.turn (-85, Stop.BRAKE)
     br.straight(250, Stop.BRAKE)
     br.left_attachment.run_angle(700,1000)
-    br.turn(54.4, Stop.BRAKE)
+    br.turn(51.4, Stop.BRAKE)
     br.straight(170, Stop.BRAKE)
     #br.left_attachment.run_angle(700,1000)
-    br.straight(50, Stop.BRAKE)
+    br.straight(23, Stop.BRAKE)
     br.left_attachment.run_angle(700,-470)
     wait(500)
-    br.straight(-315, Stop.BRAKE)
+    br.straight(-267, Stop.BRAKE)
     br.turn(-59.5, Stop.BRAKE)
-    br.straight(370, Stop.BRAKE)
-    br.straight(-180, Stop.BRAKE)
+    br.straight(400, Stop.BRAKE)
+    br.straight(-230, Stop.BRAKE)
+    
